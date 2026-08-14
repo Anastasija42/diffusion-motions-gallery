@@ -1,0 +1,175 @@
+{
+ "exp1": [
+  {
+   "gif": "media/exp1_content_text2motion_timeline_single_0167.gif",
+   "tier": "T1_simple",
+   "text": "The person is in a still position with their body lowered and resting on the ground.",
+   "mdm_skate": 0.7,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp1_content_text2motion_timeline_single_0021.gif",
+   "tier": "T1_simple",
+   "text": "A person is standing in an idle position.",
+   "mdm_skate": 0.1,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp1_content_text2motion_timeline_single_0886.gif",
+   "tier": "T1_simple",
+   "text": "A person with their hands folded behind their back begins to walk forward.",
+   "mdm_skate": 0.0,
+   "kim_skate": 0.082
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0391.gif",
+   "tier": "T2_locomotion",
+   "text": "A person with the right leg injured starts jogging to the right back diagonal at a slow pace.",
+   "mdm_skate": 0.644,
+   "kim_skate": 0.167
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0854.gif",
+   "tier": "T2_locomotion",
+   "text": "The person walks unsteadily sideways to the left while holding the dog leash in their left hand and halts by swaying their body.",
+   "mdm_skate": 0.214,
+   "kim_skate": 0.138
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0895.gif",
+   "tier": "T2_locomotion",
+   "text": "A person walking steadily in the left back diagonal direction comes to a stop.",
+   "mdm_skate": 0.013,
+   "kim_skate": 0.203
+  },
+  {
+   "gif": "media/exp1_content_text2motion_timeline_multi_0586.gif",
+   "tier": "T3_sequential",
+   "text": "A person turns abruptly to the right and starts running. They run forward in a frantic manner, then stop suddenly.",
+   "mdm_skate": 0.684,
+   "kim_skate": 0.234
+  },
+  {
+   "gif": "media/exp1_content_text2motion_timeline_multi_0366.gif",
+   "tier": "T3_sequential",
+   "text": "A person pulls the right handle using their left hand. Then, they drop their left hand and stand tall.",
+   "mdm_skate": 0.0,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp1_content_text2motion_timeline_multi_0150.gif",
+   "tier": "T3_sequential",
+   "text": "A person crawls backward, using alternating arm and leg movements. They then slowly sink down to the ground while still on hands and knees. Eventually, they are lying still, their body at rest on the surface.",
+   "mdm_skate": 0.0,
+   "kim_skate": 0.104
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0580.gif",
+   "tier": "T4_hard",
+   "text": "A person walks forward at a steady pace, holding an object in their right hand before turning to their right and continuing walking in that direction.",
+   "mdm_skate": 0.304,
+   "kim_skate": 0.175
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0312.gif",
+   "tier": "T4_hard",
+   "text": "The person picks up a mug from the table slowly, then drinks from it, and places it back while seated.",
+   "mdm_skate": 0.0,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp1_content_text2motion_overview_0555.gif",
+   "tier": "T4_hard",
+   "text": "A person is slowly walking backward while holding an object in their arms.",
+   "mdm_skate": 0.044,
+   "kim_skate": 0.181
+  }
+ ],
+ "exp2": [
+  {
+   "gif": "media/exp2_content_text2motion_timeline_single_0021.gif",
+   "tier": "T1_simple",
+   "text": "A person is standing in an idle position."
+  },
+  {
+   "gif": "media/exp2_content_text2motion_overview_0004.gif",
+   "tier": "T2_locomotion",
+   "text": "A person lethargically walks sideways to their right with left turns after each brief pause."
+  },
+  {
+   "gif": "media/exp2_content_text2motion_timeline_multi_0070.gif",
+   "tier": "T3_sequential",
+   "text": "A person is holding an object while facing the right-back diagonal. They then turn to their right side, raise the object overhead, and place it high."
+  },
+  {
+   "gif": "media/exp2_content_text2motion_overview_0049.gif",
+   "tier": "T4_hard",
+   "text": "A person picks up an object present at chest height on the left, then places it forward at torso height."
+  }
+ ],
+ "exp3": [
+  {
+   "gif": "media/exp3_0175.gif",
+   "spike_mdm": 180.6,
+   "spike_kim": 8.6
+  },
+  {
+   "gif": "media/exp3_0071.gif",
+   "spike_mdm": 10.1,
+   "spike_kim": 3.8
+  },
+  {
+   "gif": "media/exp3_0014.gif",
+   "spike_mdm": 1.8,
+   "spike_kim": 1.0
+  },
+  {
+   "gif": "media/exp3_0233.gif",
+   "spike_mdm": 4.4,
+   "spike_kim": 0.8
+  },
+  {
+   "gif": "media/exp3_0197.gif",
+   "spike_mdm": 169.3,
+   "spike_kim": 4.3
+  }
+ ],
+ "exp4": [
+  {
+   "gif": "media/exp4_0124.gif",
+   "mdm_skate": 1.0,
+   "kim_err": 0.055,
+   "kim_skate": 0.148
+  },
+  {
+   "gif": "media/exp4_0050.gif",
+   "mdm_skate": 0.475,
+   "kim_err": 0.025,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp4_0125.gif",
+   "mdm_skate": 0.0,
+   "kim_err": 0.034,
+   "kim_skate": 0.0
+  },
+  {
+   "gif": "media/exp4_0199.gif",
+   "mdm_skate": 0.888,
+   "kim_err": 0.075,
+   "kim_skate": 0.262
+  },
+  {
+   "gif": "media/exp4_0082.gif",
+   "mdm_skate": 0.912,
+   "kim_err": 0.044,
+   "kim_skate": 0.228
+  },
+  {
+   "gif": "media/exp4_0222.gif",
+   "mdm_skate": 0.017,
+   "kim_err": 0.003,
+   "kim_skate": 0.0
+  }
+ ]
+}
