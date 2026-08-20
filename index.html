@@ -16,24 +16,29 @@
   body{margin:0;background:var(--bg);color:var(--fg);
        font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   .wrap{max-width:1080px;margin:0 auto;padding:2rem 1.2rem 4rem}
-  header{margin-bottom:2.2rem}
+  header{margin-bottom:2rem}
   h1{font-size:1.7rem;margin:0 0 .4rem}
-  .sub{color:var(--muted);max-width:60ch}
+  .sub{color:var(--muted);max-width:62ch}
   .legend{margin-top:.8rem;font-size:.9rem}
   .dot{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.35em}
-  section{margin-top:2.8rem}
+  section{margin-top:2.6rem}
   h2{font-size:1.25rem;border-bottom:1px solid var(--line);padding-bottom:.4rem}
+  h3{font-size:1rem;margin:1.4rem 0 .2rem;color:var(--muted);font-weight:600}
   .intro{color:var(--muted);font-size:.95rem;max-width:70ch}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:1rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:.8rem}
   .card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-  .card img{width:100%;display:block;background:#fff}
+  .card img{width:100%;display:block;background:#fff;cursor:zoom-in}
   .card .cap{padding:.6rem .8rem;font-size:.85rem}
   .card .prompt{font-style:italic;color:var(--muted)}
   .badge{display:inline-block;font-size:.75rem;padding:.05rem .5rem;border:1px solid var(--line);
          border-radius:99px;margin-right:.4rem;color:var(--muted)}
+  table.m{border-collapse:collapse;font-size:.76rem;width:100%;margin-top:.4rem}
+  table.m th,table.m td{padding:.08rem .3rem;text-align:right;border-bottom:1px solid var(--line)}
+  table.m th:first-child,table.m td:first-child{text-align:left}
+  table.m thead th{color:var(--muted);font-weight:500}
+  td.mdm{color:var(--mdm)} td.kim{color:var(--kim)}
   footer{margin-top:3.5rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem}
   a{color:inherit}
-  .card img{cursor:zoom-in}
   #lightbox{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;
             justify-content:center;background:rgba(0,0,0,.82);z-index:100;cursor:zoom-out;
             padding:2rem 1rem}
@@ -44,6 +49,7 @@
                     color:#eee;background:rgba(0,0,0,.55);padding:.4rem .9rem;border-radius:8px}
   #lightbox .lb-cap .badge{color:#ddd;border-color:#555}
   #lightbox .lb-cap .prompt{color:#bbb}
+  #lightbox .lb-cap table.m th,#lightbox .lb-cap table.m td{border-color:#555;color:#ddd}
   #lightbox .lb-close{position:fixed;top:.7rem;right:1rem;font-size:1.6rem;color:#fff;
                       background:none;border:none;cursor:pointer;line-height:1}
 </style>
@@ -52,48 +58,46 @@
 <div class="wrap">
 <header>
   <h1>MDM vs Kimodo — generated motions</h1>
-  <p class="sub">Side-by-side skeleton animations from an experimental comparison of two
-  generations of motion-diffusion models: <b>MDM</b> (Tevet et al., 2022) and
-  <b>NVIDIA Kimodo</b> (Rempe et al., 2026), evaluated on the Kimodo
-  Motion-Generation Benchmark and on HumanML3D prompts. Representative cases per
-  experiment (best / median / worst); numbers in panel titles are per-case metrics.</p>
+  <p class="sub">Skeleton animations from an experimental comparison of
+  <b>MDM</b> (Tevet et al., 2022) and <b>NVIDIA Kimodo</b> (Rempe et al., 2026).
+  Numbers are per-case metrics; click any animation to enlarge.</p>
   <p class="legend">
     <span class="dot" style="background:var(--mdm)"></span>MDM &nbsp;&nbsp;
     <span class="dot" style="background:var(--kim)"></span>Kimodo &nbsp;&nbsp;
-    <span class="badge">skate = foot-skate ratio (lower is better)</span>
+    <span class="badge">skate = foot speed during contact, m/s</span>
+    <span class="badge">ratio = skating fraction</span>
+    <span class="badge">pen / float in mm</span>
+    <span class="badge">accel in m/s²</span>
   </p>
 </header>
 
 <section id="exp1">
   <h2>Experiment 1 — Text-to-motion</h2>
-  <p class="intro">A shared prompt is given to both models. Cases are chosen per difficulty
-  tier by the largest, median, and smallest quality gap. Watch the feet: MDM tends to
+  <p class="intro">The same prompt goes to both models. Watch the feet: MDM tends to
   glide even when nearly stationary; Kimodo plants and lifts.</p>
-  <div class="grid" data-exp="exp1"></div>
+  <h3>BONES-SEED (main set, two cases per difficulty tier)</h3>
+  <div class="grid" data-exp="exp1_bones"></div>
+  <h3>HumanML3D (control set — MDM's home domain)</h3>
+  <div class="grid" data-exp="exp1_hml"></div>
 </section>
 
 <section id="exp2">
   <h2>Experiment 2 — Diversity (4 seeds at once)</h2>
-  <p class="intro">Four samples of the same prompt drawn together (opacity distinguishes
-  seeds). MDM's samples often scatter in mutually inconsistent directions; Kimodo varies
-  path and style while keeping the commanded semantics.</p>
+  <p class="intro">Four samples of one prompt drawn together; opacity distinguishes seeds.</p>
   <div class="grid" data-exp="exp2"></div>
 </section>
 
 <section id="exp3">
   <h2>Experiment 3 — Keyframe in-betweening</h2>
-  <p class="intro">Both models must hit given keyframes. MDM (inpainting) shows velocity
-  spikes at keyframe boundaries — visible as jerks or teleports; Kimodo's native
-  conditioning transitions smoothly. Panel titles show the boundary-spike factor
-  (× median motion speed).</p>
+  <p class="intro">Both models must hit given keyframes; titles show the boundary
+  velocity spike (× median speed).</p>
   <div class="grid" data-exp="exp3"></div>
 </section>
 
 <section id="exp4">
   <h2>Experiment 4 — Path following</h2>
-  <p class="intro">The character must follow a prescribed root path. MDM satisfies the
-  path exactly by construction but is dragged along it with skating feet; Kimodo walks
-  it. The ground grid slides under the follow camera, making sliding feet visible.</p>
+  <p class="intro">The character must follow a prescribed root path; the grid slides
+  under the follow camera, making skating feet visible.</p>
   <div class="grid" data-exp="exp4"></div>
 </section>
 
@@ -114,11 +118,19 @@
 </div>
 
 <script>
+function metricTable(d){
+  const r = m=>`<td>${m.skate.toFixed(2)}</td><td>${m.ratio.toFixed(2)}</td>
+                <td>${m.pen_mm.toFixed(1)}</td><td>${m.float_mm.toFixed(1)}</td>
+                <td>${m.accel.toFixed(1)}</td>`;
+  return `<table class="m">
+    <thead><tr><th></th><th>skate</th><th>ratio</th><th>pen</th><th>float</th><th>accel</th></tr></thead>
+    <tr><td class="mdm">MDM</td>${r(d.mdm)}</tr>
+    <tr><td class="kim">Kimodo</td>${r(d.kim)}</tr></table>`;
+}
 const CAP = {
-  exp1: d => `<span class="badge">${d.tier.replace('_',' ')}</span>
-              <span class="badge">MDM ${d.mdm_skate}</span>
-              <span class="badge">Kimodo ${d.kim_skate}</span>
-              <div class="prompt">${d.text}</div>`,
+  exp1_bones: d => `<span class="badge">${d.tier.replace('_',' ')}</span>
+              <div class="prompt">${d.text}</div>${metricTable(d)}`,
+  exp1_hml: d => `<div class="prompt">${d.text}</div>${metricTable(d)}`,
   exp2: d => `<span class="badge">${d.tier.replace('_',' ')}</span>
               <div class="prompt">${d.text}</div>`,
   exp3: d => `<span class="badge">spike MDM ${d.spike_mdm}×</span>

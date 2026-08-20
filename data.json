@@ -1,88 +1,248 @@
 {
- "exp1": [
+ "exp1_bones": [
   {
-   "gif": "media/exp1_content_text2motion_timeline_single_0167.gif",
+   "set": "bones",
    "tier": "T1_simple",
-   "text": "The person is in a still position with their body lowered and resting on the ground.",
-   "mdm_skate": 0.7,
-   "kim_skate": 0.0
+   "id": "content/text2motion/timeline_single/0781",
+   "short": "0781",
+   "text": "A person stands in an upright stance with their arms swaying at their sides.",
+   "gif": "media/exp1_0781.gif",
+   "mdm": {
+    "skate": 0.1,
+    "ratio": 0.088,
+    "pen_mm": 6.87,
+    "float_mm": 0.0,
+    "accel": 0.67
+   },
+   "kim": {
+    "skate": 0.004,
+    "ratio": 0.0,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 0.15
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_timeline_single_0021.gif",
+   "set": "bones",
    "tier": "T1_simple",
-   "text": "A person is standing in an idle position.",
-   "mdm_skate": 0.1,
-   "kim_skate": 0.0
+   "id": "content/text2motion/timeline_single/0031",
+   "short": "0031",
+   "text": "A person standing idle turns to right back diagonal and bends down.",
+   "gif": "media/exp1_0031.gif",
+   "mdm": {
+    "skate": 0.165,
+    "ratio": 0.309,
+    "pen_mm": 0.86,
+    "float_mm": 0.0,
+    "accel": 3.22
+   },
+   "kim": {
+    "skate": 0.035,
+    "ratio": 0.191,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 2.16
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_timeline_single_0886.gif",
-   "tier": "T1_simple",
-   "text": "A person with their hands folded behind their back begins to walk forward.",
-   "mdm_skate": 0.0,
-   "kim_skate": 0.082
-  },
-  {
-   "gif": "media/exp1_content_text2motion_overview_0391.gif",
+   "set": "bones",
    "tier": "T2_locomotion",
-   "text": "A person with the right leg injured starts jogging to the right back diagonal at a slow pace.",
-   "mdm_skate": 0.644,
-   "kim_skate": 0.167
+   "id": "content/text2motion/overview/0695",
+   "short": "0695",
+   "text": "A person standing upright turns to the right and starts running in a panicked manner at a quick pace before they come to a stop.",
+   "gif": "media/exp1_0695.gif",
+   "mdm": {
+    "skate": 0.241,
+    "ratio": 0.34,
+    "pen_mm": 0.0,
+    "float_mm": 1.37,
+    "accel": 7.44
+   },
+   "kim": {
+    "skate": 0.059,
+    "ratio": 0.24,
+    "pen_mm": 0.0,
+    "float_mm": 3.41,
+    "accel": 9.31
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_overview_0854.gif",
+   "set": "bones",
    "tier": "T2_locomotion",
-   "text": "The person walks unsteadily sideways to the left while holding the dog leash in their left hand and halts by swaying their body.",
-   "mdm_skate": 0.214,
-   "kim_skate": 0.138
+   "id": "content/text2motion/overview/0809",
+   "short": "0809",
+   "text": "A person steadily jogs diagonally left back while smoking.",
+   "gif": "media/exp1_0809.gif",
+   "mdm": {
+    "skate": 0.26,
+    "ratio": 0.311,
+    "pen_mm": 0.0,
+    "float_mm": 1.55,
+    "accel": 10.96
+   },
+   "kim": {
+    "skate": 0.083,
+    "ratio": 0.444,
+    "pen_mm": 0.0,
+    "float_mm": 0.52,
+    "accel": 10.37
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_overview_0895.gif",
-   "tier": "T2_locomotion",
-   "text": "A person walking steadily in the left back diagonal direction comes to a stop.",
-   "mdm_skate": 0.013,
-   "kim_skate": 0.203
-  },
-  {
-   "gif": "media/exp1_content_text2motion_timeline_multi_0586.gif",
+   "set": "bones",
    "tier": "T3_sequential",
-   "text": "A person turns abruptly to the right and starts running. They run forward in a frantic manner, then stop suddenly.",
-   "mdm_skate": 0.684,
-   "kim_skate": 0.234
-  },
-  {
-   "gif": "media/exp1_content_text2motion_timeline_multi_0366.gif",
-   "tier": "T3_sequential",
-   "text": "A person pulls the right handle using their left hand. Then, they drop their left hand and stand tall.",
-   "mdm_skate": 0.0,
-   "kim_skate": 0.0
-  },
-  {
-   "gif": "media/exp1_content_text2motion_timeline_multi_0150.gif",
-   "tier": "T3_sequential",
+   "id": "content/text2motion/timeline_multi/0150",
+   "short": "0150",
    "text": "A person crawls backward, using alternating arm and leg movements. They then slowly sink down to the ground while still on hands and knees. Eventually, they are lying still, their body at rest on the surface.",
-   "mdm_skate": 0.0,
-   "kim_skate": 0.104
+   "gif": "media/exp1_0150.gif",
+   "mdm": {
+    "skate": 0.073,
+    "ratio": 0.0,
+    "pen_mm": 1.77,
+    "float_mm": 6.04,
+    "accel": 0.3
+   },
+   "kim": {
+    "skate": 0.078,
+    "ratio": 0.104,
+    "pen_mm": 4.36,
+    "float_mm": 0.0,
+    "accel": 1.42
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_overview_0580.gif",
-   "tier": "T4_hard",
-   "text": "A person walks forward at a steady pace, holding an object in their right hand before turning to their right and continuing walking in that direction.",
-   "mdm_skate": 0.304,
-   "kim_skate": 0.175
+   "set": "bones",
+   "tier": "T3_sequential",
+   "id": "content/text2motion/timeline_multi/0536",
+   "short": "0536",
+   "text": "A person reaches down to lift an object from the ground to their left, turns to the right, and places it behind them while squatting. They then turn to their left, stand up, and place the object on the ground to their right. Finally, the person stands upright and faces forward.",
+   "gif": "media/exp1_0536.gif",
+   "mdm": {
+    "skate": 0.025,
+    "ratio": 0.0,
+    "pen_mm": 0.2,
+    "float_mm": 0.0,
+    "accel": 0.4
+   },
+   "kim": {
+    "skate": 0.037,
+    "ratio": 0.04,
+    "pen_mm": 0.38,
+    "float_mm": 0.0,
+    "accel": 1.42
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_overview_0312.gif",
+   "set": "bones",
    "tier": "T4_hard",
+   "id": "content/text2motion/overview/0312",
+   "short": "0312",
    "text": "The person picks up a mug from the table slowly, then drinks from it, and places it back while seated.",
-   "mdm_skate": 0.0,
-   "kim_skate": 0.0
+   "gif": "media/exp1_0312.gif",
+   "mdm": {
+    "skate": 0.019,
+    "ratio": 0.0,
+    "pen_mm": 1.01,
+    "float_mm": 0.0,
+    "accel": 0.2
+   },
+   "kim": {
+    "skate": 0.007,
+    "ratio": 0.0,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 0.14
+   }
   },
   {
-   "gif": "media/exp1_content_text2motion_overview_0555.gif",
+   "set": "bones",
    "tier": "T4_hard",
+   "id": "content/text2motion/overview/0555",
+   "short": "0555",
    "text": "A person is slowly walking backward while holding an object in their arms.",
-   "mdm_skate": 0.044,
-   "kim_skate": 0.181
+   "gif": "media/exp1_0555.gif",
+   "mdm": {
+    "skate": 0.074,
+    "ratio": 0.044,
+    "pen_mm": 0.0,
+    "float_mm": 0.23,
+    "accel": 1.19
+   },
+   "kim": {
+    "skate": 0.036,
+    "ratio": 0.181,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 1.64
+   }
+  }
+ ],
+ "exp1_hml": [
+  {
+   "set": "hml",
+   "tier": "HumanML3D",
+   "id": "hml/002332",
+   "short": "002332",
+   "text": "a person walks straight forward quickly.",
+   "gif": "media/exp1_002332.gif",
+   "mdm": {
+    "skate": 0.204,
+    "ratio": 0.053,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 1.83
+   },
+   "kim": {
+    "skate": 0.083,
+    "ratio": 0.284,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 9.67
+   }
+  },
+  {
+   "set": "hml",
+   "tier": "HumanML3D",
+   "id": "hml/008457",
+   "short": "008457",
+   "text": "a person warlk forward with a very possive stride.",
+   "gif": "media/exp1_008457.gif",
+   "mdm": {
+    "skate": 0.394,
+    "ratio": 0.667,
+    "pen_mm": 0.0,
+    "float_mm": 35.22,
+    "accel": 15.7
+   },
+   "kim": {
+    "skate": 0.071,
+    "ratio": 0.13,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 6.47
+   }
+  },
+  {
+   "set": "hml",
+   "tier": "HumanML3D",
+   "id": "hml/009209",
+   "short": "009209",
+   "text": "a man wobbles while walking forward.",
+   "gif": "media/exp1_009209.gif",
+   "mdm": {
+    "skate": 0.21,
+    "ratio": 0.065,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 2.2
+   },
+   "kim": {
+    "skate": 0.045,
+    "ratio": 0.148,
+    "pen_mm": 0.0,
+    "float_mm": 0.0,
+    "accel": 3.01
+   }
   }
  ],
  "exp2": [
