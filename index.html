@@ -85,12 +85,14 @@
 
 <section id="exp3">
   <h2>Eksperiment 3 — popunjavanje između ključnih kadrova</h2>
-  <p class="sub">skok = najveća brzina na granici ključnog kadra, u odnosu na medijalnu brzinu pokreta</p>
+  <p class="sub">sivi skeleti = zadati ključni kadrovi; skok = najveća brzina na granici
+  ključnog kadra, u odnosu na medijalnu brzinu pokreta</p>
   <div class="grid" data-exp="exp3"></div>
 </section>
 
 <section id="exp4">
   <h2>Eksperiment 4 — praćenje putanje</h2>
+  <p class="sub">isprekidana linija = zadata putanja korena na tlu</p>
   <div class="grid" data-exp="exp4"></div>
 </section>
 
@@ -129,10 +131,12 @@ const CAP = {
   exp2: d => `<span class="badge">${TIER[d.tier] || d.tier}</span>
               <div class="prompt">${d.text}</div>`,
   exp3: d => `<span class="badge">skok MDM ${d.spike_mdm}×</span>
-              <span class="badge">Kimodo ${d.spike_kim}×</span>`,
+              <span class="badge">Kimodo ${d.spike_kim}×</span>
+              ${d.text ? `<div class="prompt">${d.text}</div>` : ''}`,
   exp4: d => `<span class="badge">MDM klizanje ${d.mdm_skate}</span>
               <span class="badge">Kimodo greška ${d.kim_err} m</span>
-              <span class="badge">Kimodo klizanje ${d.kim_skate}</span>`,
+              <span class="badge">Kimodo klizanje ${d.kim_skate}</span>
+              ${d.text ? `<div class="prompt">${d.text}</div>` : ''}`,
 };
 fetch('data.json').then(r => r.json()).then(data => {
   for (const [exp, rows] of Object.entries(data)) {

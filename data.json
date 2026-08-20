@@ -270,26 +270,31 @@
  "exp3": [
   {
    "gif": "media/exp3_0175.gif",
+   "text": "A person stands with arms crossed, steps forward with the right leg, and remains standing idle.",
    "spike_mdm": 180.6,
    "spike_kim": 8.6
   },
   {
    "gif": "media/exp3_0071.gif",
+   "text": "A person lifts the left hand to turn a small valve in a circular direction.",
    "spike_mdm": 10.1,
    "spike_kim": 3.8
   },
   {
    "gif": "media/exp3_0014.gif",
+   "text": "A person walks backwards with slow and small strides while facing forward.",
    "spike_mdm": 1.8,
    "spike_kim": 1.0
   },
   {
    "gif": "media/exp3_0233.gif",
+   "text": "A person walks forward at a steady pace, then moves in a counterclockwise arc, and finally walks backward.",
    "spike_mdm": 4.4,
    "spike_kim": 0.8
   },
   {
    "gif": "media/exp3_0197.gif",
+   "text": "A person is in a crouched position while swaying their body slowly.",
    "spike_mdm": 169.3,
    "spike_kim": 4.3
   }
@@ -297,36 +302,42 @@
  "exp4": [
   {
    "gif": "media/exp4_0124.gif",
+   "text": "A person starts to walk sideways to the left, then scratches their head and salutes with their left hand.",
    "mdm_skate": 1.0,
    "kim_err": 0.055,
    "kim_skate": 0.148
   },
   {
    "gif": "media/exp4_0050.gif",
+   "text": "A person turns a small crank in a counterclockwise direction from underneath at a medium height level with their left hand while standing.",
    "mdm_skate": 0.475,
    "kim_err": 0.025,
    "kim_skate": 0.0
   },
   {
    "gif": "media/exp4_0125.gif",
+   "text": "A person swiftly extends their left arm ahead to rotate a small crank below the torso with their left hand.",
    "mdm_skate": 0.0,
    "kim_err": 0.034,
    "kim_skate": 0.0
   },
   {
    "gif": "media/exp4_0199.gif",
+   "text": "A person bumps into a small obstacle and performs hand gestures while walking forward with their head facing left back diagonally.",
    "mdm_skate": 0.888,
    "kim_err": 0.075,
    "kim_skate": 0.262
   },
   {
    "gif": "media/exp4_0082.gif",
+   "text": "A person standing and holding a crate turns back over their left shoulder and starts walking forward steadily.",
    "mdm_skate": 0.912,
    "kim_err": 0.044,
    "kim_skate": 0.228
   },
   {
    "gif": "media/exp4_0222.gif",
+   "text": "A person is holding an object with their left hand stretched forward.",
    "mdm_skate": 0.017,
    "kim_err": 0.003,
    "kim_skate": 0.0
