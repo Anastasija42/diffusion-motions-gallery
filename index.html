@@ -9,9 +9,6 @@
     --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --card:#f6f6f7; --line:#e3e3e6;
     --mdm:#ff7f0e; --kim:#2ca02c;
   }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#121214; --fg:#ececef; --muted:#9a9aa2; --card:#1c1c20; --line:#2c2c32; }
-  }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
        font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -56,10 +53,10 @@
 <body>
 <div class="wrap">
 <header>
-  <h1>MDM i Kimodo — generisani pokreti</h1>
-  <p class="sub">Skeletne animacije iz eksperimentalnog poređenja modela
-  <b>MDM</b> (Tevet i dr., 2022) i <b>NVIDIA Kimodo</b> (Rempe i dr., 2026).
-  Brojevi su metrike po primeru; klik na animaciju je uvećava.</p>
+  <h1>Galerija pokreta: MDM i Kimodo</h1>
+  <p class="sub">Primeri pokreta koje sam generisala tokom eksperimentalnog
+  poređenja dva difuziona modela za moj seminarski rad. Svaka kartica
+  prikazuje isti zadatak za oba modela, klik na animaciju je uvećava.</p>
   <p class="legend">
     <span class="dot" style="background:var(--mdm)"></span>MDM &nbsp;&nbsp;
     <span class="dot" style="background:var(--kim)"></span>Kimodo &nbsp;&nbsp;
@@ -138,16 +135,18 @@ const CAP = {
               <span class="badge">Kimodo klizanje ${d.kim_skate}</span>
               ${d.text ? `<div class="prompt">${d.text}</div>` : ''}`,
 };
+const V = '3';   // bump on media changes so browsers drop cached GIFs
 fetch('data.json').then(r => r.json()).then(data => {
   for (const [exp, rows] of Object.entries(data)) {
     const grid = document.querySelector(`[data-exp="${exp}"]`);
     if (!grid) continue;
     for (const d of rows) {
+      const src = `${d.gif}?v=${V}`;
       const card = document.createElement('div');
       card.className = 'card';
-      card.innerHTML = `<img src="${d.gif}" loading="lazy" alt="poređenje pokreta">
+      card.innerHTML = `<img src="${src}" loading="lazy" alt="poređenje pokreta">
                         <div class="cap">${CAP[exp](d)}</div>`;
-      card.querySelector('img').addEventListener('click', () => openLightbox(d.gif, CAP[exp](d)));
+      card.querySelector('img').addEventListener('click', () => openLightbox(src, CAP[exp](d)));
       grid.appendChild(card);
     }
   }
