@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MDM vs Kimodo — Motion Gallery</title>
+<title>MDM i Kimodo — galerija pokreta</title>
 <style>
   :root{
     --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --card:#f6f6f7; --line:#e3e3e6;
@@ -16,15 +16,14 @@
   body{margin:0;background:var(--bg);color:var(--fg);
        font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   .wrap{max-width:1080px;margin:0 auto;padding:2rem 1.2rem 4rem}
-  header{margin-bottom:2rem}
+  header{margin-bottom:1.8rem}
   h1{font-size:1.7rem;margin:0 0 .4rem}
   .sub{color:var(--muted);max-width:62ch}
   .legend{margin-top:.8rem;font-size:.9rem}
   .dot{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.35em}
-  section{margin-top:2.6rem}
+  section{margin-top:2.4rem}
   h2{font-size:1.25rem;border-bottom:1px solid var(--line);padding-bottom:.4rem}
-  h3{font-size:1rem;margin:1.4rem 0 .2rem;color:var(--muted);font-weight:600}
-  .intro{color:var(--muted);font-size:.95rem;max-width:70ch}
+  h3{font-size:1rem;margin:1.3rem 0 .2rem;color:var(--muted);font-weight:600}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:.8rem}
   .card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
   .card img{width:100%;display:block;background:#fff;cursor:zoom-in}
@@ -57,87 +56,83 @@
 <body>
 <div class="wrap">
 <header>
-  <h1>MDM vs Kimodo — generated motions</h1>
-  <p class="sub">Skeleton animations from an experimental comparison of
-  <b>MDM</b> (Tevet et al., 2022) and <b>NVIDIA Kimodo</b> (Rempe et al., 2026).
-  Numbers are per-case metrics; click any animation to enlarge.</p>
+  <h1>MDM i Kimodo — generisani pokreti</h1>
+  <p class="sub">Skeletne animacije iz eksperimentalnog poređenja modela
+  <b>MDM</b> (Tevet i dr., 2022) i <b>NVIDIA Kimodo</b> (Rempe i dr., 2026).
+  Brojevi su metrike po primeru; klik na animaciju je uvećava.</p>
   <p class="legend">
     <span class="dot" style="background:var(--mdm)"></span>MDM &nbsp;&nbsp;
     <span class="dot" style="background:var(--kim)"></span>Kimodo &nbsp;&nbsp;
-    <span class="badge">skate = foot speed during contact, m/s</span>
-    <span class="badge">ratio = skating fraction</span>
-    <span class="badge">pen / float in mm</span>
-    <span class="badge">accel in m/s²</span>
+    <span class="badge">klizanje = brzina stopala tokom kontakta (m/s)</span>
+    <span class="badge">udeo = udeo kadrova sa klizanjem</span>
+    <span class="badge">prod. / lebd. u mm</span>
+    <span class="badge">ubrz. u m/s²</span>
   </p>
 </header>
 
 <section id="exp1">
-  <h2>Experiment 1 — Text-to-motion</h2>
-  <p class="intro">The same prompt goes to both models. Watch the feet: MDM tends to
-  glide even when nearly stationary; Kimodo plants and lifts.</p>
-  <h3>BONES-SEED (main set, two cases per difficulty tier)</h3>
+  <h2>Eksperiment 1 — generisanje iz teksta</h2>
+  <h3>BONES-SEED (glavni skup, po dva primera iz svakog nivoa)</h3>
   <div class="grid" data-exp="exp1_bones"></div>
-  <h3>HumanML3D (control set — MDM's home domain)</h3>
+  <h3>HumanML3D (kontrolni skup — MDM-ov matični domen)</h3>
   <div class="grid" data-exp="exp1_hml"></div>
 </section>
 
 <section id="exp2">
-  <h2>Experiment 2 — Diversity (4 seeds at once)</h2>
-  <p class="intro">Four samples of one prompt drawn together; opacity distinguishes seeds.</p>
+  <h2>Eksperiment 2 — raznovrsnost (4 semena odjednom)</h2>
   <div class="grid" data-exp="exp2"></div>
 </section>
 
 <section id="exp3">
-  <h2>Experiment 3 — Keyframe in-betweening</h2>
-  <p class="intro">Both models must hit given keyframes; titles show the boundary
-  velocity spike (× median speed).</p>
+  <h2>Eksperiment 3 — popunjavanje između ključnih kadrova</h2>
+  <p class="sub">skok = najveća brzina na granici ključnog kadra, u odnosu na medijalnu brzinu pokreta</p>
   <div class="grid" data-exp="exp3"></div>
 </section>
 
 <section id="exp4">
-  <h2>Experiment 4 — Path following</h2>
-  <p class="intro">The character must follow a prescribed root path; the grid slides
-  under the follow camera, making skating feet visible.</p>
+  <h2>Eksperiment 4 — praćenje putanje</h2>
   <div class="grid" data-exp="exp4"></div>
 </section>
 
 <footer>
-  <p>Skeleton visualizations of <em>model outputs</em> only (22-joint common layout);
-  no dataset motions are redistributed here. MDM outputs from the public
+  <p>Prikazani su isključivo <em>izlazi modela</em> (zajednički raspored od 22 zgloba);
+  pokreti iz skupova podataka se ne redistribuiraju. MDM: javni
   <a href="https://github.com/GuyTevet/motion-diffusion-model">motion-diffusion-model</a>
-  checkpoint; Kimodo outputs from
-  <a href="https://github.com/nv-tlabs/kimodo">Kimodo-SOMA-RP-v1.1</a> under the NVIDIA
-  Open Model License. Benchmark: <a href="https://huggingface.co/datasets/nvidia/Kimodo-Motion-Gen-Benchmark">Kimodo Motion-Generation Benchmark</a>.</p>
+  checkpoint; Kimodo:
+  <a href="https://github.com/nv-tlabs/kimodo">Kimodo-SOMA-RP-v1.1</a> pod NVIDIA
+  Open Model License; benchmark: <a href="https://huggingface.co/datasets/nvidia/Kimodo-Motion-Gen-Benchmark">Kimodo Motion-Generation Benchmark</a>.</p>
 </footer>
 </div>
 
 <div id="lightbox" aria-modal="true" role="dialog">
-  <button class="lb-close" aria-label="Close">&times;</button>
-  <img alt="enlarged motion comparison">
+  <button class="lb-close" aria-label="Zatvori">&times;</button>
+  <img alt="uvećan prikaz pokreta">
   <div class="lb-cap"></div>
 </div>
 
 <script>
+const TIER = {T1_simple:"T1 jednostavno", T2_locomotion:"T2 lokomocija",
+              T3_sequential:"T3 sekvencijalno", T4_hard:"T4 teško"};
 function metricTable(d){
   const r = m=>`<td>${m.skate.toFixed(2)}</td><td>${m.ratio.toFixed(2)}</td>
                 <td>${m.pen_mm.toFixed(1)}</td><td>${m.float_mm.toFixed(1)}</td>
                 <td>${m.accel.toFixed(1)}</td>`;
   return `<table class="m">
-    <thead><tr><th></th><th>skate</th><th>ratio</th><th>pen</th><th>float</th><th>accel</th></tr></thead>
+    <thead><tr><th></th><th>klizanje</th><th>udeo</th><th>prod.</th><th>lebd.</th><th>ubrz.</th></tr></thead>
     <tr><td class="mdm">MDM</td>${r(d.mdm)}</tr>
     <tr><td class="kim">Kimodo</td>${r(d.kim)}</tr></table>`;
 }
 const CAP = {
-  exp1_bones: d => `<span class="badge">${d.tier.replace('_',' ')}</span>
+  exp1_bones: d => `<span class="badge">${TIER[d.tier] || d.tier}</span>
               <div class="prompt">${d.text}</div>${metricTable(d)}`,
   exp1_hml: d => `<div class="prompt">${d.text}</div>${metricTable(d)}`,
-  exp2: d => `<span class="badge">${d.tier.replace('_',' ')}</span>
+  exp2: d => `<span class="badge">${TIER[d.tier] || d.tier}</span>
               <div class="prompt">${d.text}</div>`,
-  exp3: d => `<span class="badge">spike MDM ${d.spike_mdm}×</span>
+  exp3: d => `<span class="badge">skok MDM ${d.spike_mdm}×</span>
               <span class="badge">Kimodo ${d.spike_kim}×</span>`,
-  exp4: d => `<span class="badge">MDM skate ${d.mdm_skate}</span>
-              <span class="badge">Kimodo err ${d.kim_err} m</span>
-              <span class="badge">Kimodo skate ${d.kim_skate}</span>`,
+  exp4: d => `<span class="badge">MDM klizanje ${d.mdm_skate}</span>
+              <span class="badge">Kimodo greška ${d.kim_err} m</span>
+              <span class="badge">Kimodo klizanje ${d.kim_skate}</span>`,
 };
 fetch('data.json').then(r => r.json()).then(data => {
   for (const [exp, rows] of Object.entries(data)) {
@@ -146,7 +141,7 @@ fetch('data.json').then(r => r.json()).then(data => {
     for (const d of rows) {
       const card = document.createElement('div');
       card.className = 'card';
-      card.innerHTML = `<img src="${d.gif}" loading="lazy" alt="motion comparison">
+      card.innerHTML = `<img src="${d.gif}" loading="lazy" alt="poređenje pokreta">
                         <div class="cap">${CAP[exp](d)}</div>`;
       card.querySelector('img').addEventListener('click', () => openLightbox(d.gif, CAP[exp](d)));
       grid.appendChild(card);
@@ -158,7 +153,7 @@ const lb = document.getElementById('lightbox');
 const lbImg = lb.querySelector('img');
 const lbCap = lb.querySelector('.lb-cap');
 function openLightbox(src, capHTML) {
-  lbImg.src = src;               // re-setting src restarts the GIF from t=0
+  lbImg.src = src;               // ponovno postavljanje src restartuje GIF
   lbCap.innerHTML = capHTML;
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
